@@ -1,0 +1,23 @@
+!!! 5
+%html
+  %head
+    %title 同人信 ver. α
+  %body
+    %h1 同人誌電子配信システム 同人信 ver. α
+    %p{style: "color: red;"}= @error
+    %p
+      同人信パスコードを用いて同人誌をダウンロードすることができます。
+      %a.twitter-link{:href => "https://twitter.com/share?text=同人誌配信システム 同人信&url=http://doujinshin.com/", :onclick => "window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;", :rel => "nofollow"}
+        Twitterで共有
+    %p
+      以下のフィールドに同人信パスコードを入力し、認証してください。
+      %form{:action => "/passcode", :method => "post"}
+        パスコード：
+        %input{:name => "passcode", :type => "text"}/
+        %input{:type => "submit", :value => "パスコード認証"}/
+    %footer
+      Copyright:
+      %a{href: "https://twitter.com/hidesys"} ひでシス(@hidesys)
+      ,
+      %a{href: "http://hidesys.net/"} 西恵軟件
+

@@ -1,0 +1,7 @@
+/vendor/bundler
+/tmp
+/log
+passcodes.yml
+/public/images
+/.bundle
+
